@@ -1,0 +1,17 @@
+md-toolbar {
+    position: relative;
+    background-color: #222;
+    z-index: 5;
+    a.logo {
+        text-decoration: none;
+        color: inherit;
+        &:visited {
+            text-decoration: none;
+        }
+    }
+}
+
+.footer {
+    height: 16rem;
+    background-color: #424242;
+}

@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color='primary' class='mat-elevation-z10'>
+    <a class='logo' routerLink='/'>Best of the Best</a>
+    <button md-button>STATS</button>
+    <button md-button>LEAGUES</button>
+    <button md-button>DRAFT</button>
+    <div class='spacer'></div>
+    <a md-button routerLink="login" colorr='accent'>LOGIN</a>
+</md-toolbar>
+<md-sidenav-container>
+    <md-sidenav mode="side" opened="false">Drawer content</md-sidenav>
+    <div class="my-content">
+        <router-outlet></router-outlet>
+        <!-- Routed views go here -->
+
+        Main content
+        <div class='footer'>
+        </div>
+    </div>
+</md-sidenav-container>

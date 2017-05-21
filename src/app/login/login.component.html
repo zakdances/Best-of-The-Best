@@ -1,0 +1,80 @@
+<div class='hero'>
+    <div class='logo'>
+        <!--<div class='football'></div>-->
+        <h2 class='f2'>Welcome</h2>
+        <!--<div class='mw5 center'>Use your Facebook account or Google account to login to Best of the Best.</div>-->
+        <span>l</span>
+        <!--<div class='button-row'>
+            <a md-raised-button routerLink="login" color='accent'>Sign Up With Facebook</a>
+            <button md-raised-button color='primary'>Sign Up With Google</button>
+        </div>-->
+    </div>
+
+</div>
+
+<md-card class="login-card">
+    <div id="firebaseui-auth-container"></div>
+    <md-tab-group>
+        <md-tab label="SIGNUP">
+            <div class='content'>
+                <!--<md-card-header>
+                    <div md-card-avatar class="example-header-image"></div>
+                    <md-card-title>Signup</md-card-title>
+                    <md-card-subtitle>Dog Breed</md-card-subtitle>
+                </md-card-header>-->
+                <!--<img md-card-image src="assets/img/examples/shiba2.jpg">-->
+                <md-card-content>
+                    <!--<p>
+                        You can create an account using Facebook or Google. If you've already created an account, you can login.
+                    </p>-->
+                    <div class='button-row'>
+                        <div class='f2 fw3 mt3 mbb4'>SIGNUP WITH</div>
+                        <md-icon class='center mb2'>home</md-icon>
+                        <!--<hr/>-->
+                        <a md-raised-button routerLink="login" class='facebook' (click)='loginWithFacebook()'>Sign Up With Facebook</a>
+                        <div class='f6 fw6 mt2 mb2'>OR</div>
+                        <button md-raised-button class='google' (click)='loginWithGoogle()'>Sign Up With Google</button>
+                        <md-icon class='center mb2'>home</md-icon>
+                        <div class='f3 fw3 mt3 mb3'>ALREADY SIGN UP?</div>
+                    </div>
+                </md-card-content>
+                <!--<md-card-actions>
+                    <button class='facebook' md-raised-button>Sign Up With Facebook</button>
+                    <button class='google' md-raised-button>Sign Up With Google</button>
+                </md-card-actions>-->
+            </div>
+        </md-tab>
+        <md-tab label="LOGIN">
+            <div class='content'>
+                <!--<md-card-header>
+                    <div md-card-avatar class="example-header-image"></div>
+                    <md-card-title>Signup</md-card-title>
+                    <md-card-subtitle>Dog Breed</md-card-subtitle>
+                </md-card-header>-->
+                <!--<img md-card-image src="assets/img/examples/shiba2.jpg">-->
+                <md-card-content>
+                    <!--<p>
+                        You can create an account using Facebook or Google. If you've already created an account, you can login.
+                    </p>-->
+                    <div class='button-row'>
+                        <div class='f1 fw3 mt3 mbb4'>SIGNUP WITH</div>
+                        <md-icon class='center mb2'>home</md-icon>
+                        <a md-raised-button routerLink="login" class='facebook'>Sign Up With Facebook</a>
+                        <div class='f6 fw6 mt2 mb2'>OR</div>
+                        <button md-raised-button class='google'>Sign Up With Google</button>
+                        <md-icon class='center mb2'>home</md-icon>
+                        <div class='f2 fw3 mt3 mb3'>ALREADY SIGN UP?</div>
+                    </div>
+                </md-card-content>
+                <!--<md-card-actions>
+                    <button class='facebook' md-raised-button>Sign Up With Facebook</button>
+                    <button class='google' md-raised-button>Sign Up With Google</button>
+                </md-card-actions>-->
+            </div>
+        </md-tab>
+    </md-tab-group>
+
+</md-card>
+
+<div class='extras'>
+</div>
