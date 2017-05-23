@@ -13,6 +13,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
  import { AngularFireAuthModule } from 'angularfire2/auth';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -20,6 +21,14 @@ import { appRoutes } from './routes';
 import { HomeComponent } from './home/home.component';
 import { CreateLeagueComponent } from './create-league/create-league.component';
 import { DraftComponent } from './draft/draft.component';
+import { SharedService } from './shared.service';
+import { LeaguesComponent } from './leagues/leagues.component';
+import { UserNameFromIdPipe } from './user-name-from-id.pipe';
+import { UserAvatarFromIdPipe } from './user-avatar-from-id.pipe';
+import { LeagueNameFromIdPipe } from './league-name-from-id.pipe';
+import { LeagueAvatarFromIdPipe } from './league-avatar-from-id.pipe';
+import { LeagueComponent } from './league/league.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +36,13 @@ import { DraftComponent } from './draft/draft.component';
     LoginComponent,
     HomeComponent,
     CreateLeagueComponent,
-    DraftComponent
+    DraftComponent,
+    LeaguesComponent,
+    UserNameFromIdPipe,
+    UserAvatarFromIdPipe,
+    LeagueNameFromIdPipe,
+    LeagueAvatarFromIdPipe,
+    LeagueComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +53,10 @@ import { DraftComponent } from './draft/draft.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     MaterialModule,
+    NgxDatatableModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

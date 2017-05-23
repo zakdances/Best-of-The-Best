@@ -1,19 +1,26 @@
-<md-toolbar color='primary' class='mat-elevation-z10'>
+<md-toolbar color='primary' class='mmat-elevation-z10'>
     <a class='logo' routerLink='/'>Best of the Best</a>
-    <button md-button>STATS</button>
-    <button md-button>LEAGUES</button>
-    <button md-button>DRAFT</button>
+    <!--<button md-button>STATS</button>-->
+    <a md-button routerLink="leagues" colorr='accent'>leagues</a>
+    <a md-button routerLink="draft" colorr='accent'>draft</a>
     <div class='spacer'></div>
-    <a md-button routerLink="login" colorr='accent'>LOGIN</a>
+    <a md-button routerLink="login" colorr='accent' *ngIf='!(shared.user | async)'>LOGIN</a>
+    <a md-button routerLink="create-league" colorr='accent' *ngIf='shared.user | async'>Create League</a>
+    <button md-button (click)="shared.logout()" colorr='accent' *ngIf='shared.user | async'>LOGOFF</button>
+    <div class='avatar' *ngIf='shared.user | async' [style.background-image]='"url(" + avatar + ")"'></div>
 </md-toolbar>
 <md-sidenav-container>
     <md-sidenav mode="side" opened="false">Drawer content</md-sidenav>
     <div class="my-content">
-        <router-outlet></router-outlet>
+        <div class='main'>
+            <router-outlet></router-outlet>
+        </div>
+
         <!-- Routed views go here -->
 
-        Main content
+        <!--<div>Main content</div>-->
         <div class='footer'>
+            footer
         </div>
     </div>
 </md-sidenav-container>

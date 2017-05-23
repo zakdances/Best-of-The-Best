@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
+// import { Observable } from 'rxjs/Observable';
+// import { AngularFireAuth } from 'angularfire2/auth';
+// import * as firebase from 'firebase/app';
+import { RouterModule, Router } from '@angular/router';
+import { SharedService } from './../shared.service';
 
 @Component({
   selector: 'app-login',
@@ -10,47 +12,29 @@ import * as firebase from 'firebase/app';
 })
 export class LoginComponent implements OnInit {
 
-  user: Observable<firebase.User>;
+  // user: Observable<firebase.User>;
 
-  constructor(public afAuth: AngularFireAuth) {
+  constructor(private shared: SharedService, private router: Router) {
     
   }
 
   ngOnInit() {
-    this.user = this.afAuth.authState;
+    // this.user = this.afAuth.authState;
   }
 
   loginWithFacebook() {
-    const provider = new firebase.auth.FacebookAuthProvider();
-    
-    provider.setCustomParameters({
-  'display': 'popup'
-    });
-
-firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-  var token = result.credential.accessToken;
-  // The signed-in user info.
-  var user = result.user;
-  // ...
-}).catch(function(error: any) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});    
+    this.shared.loginWithFacebook(); 
   }
 
   loginWithGoogle() {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    // this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    this.shared.loginWithGoogle().then(() => {
+      this.router.navigateByUrl('/');
+    });
   }
 
   logout() {
-    this.afAuth.auth.signOut();
+    this.shared.logout();
   }
 
 }

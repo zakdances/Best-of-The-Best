@@ -1,0 +1,99 @@
+.hero {
+    // min-height: 4rem;
+    display: flow-root;
+    font-weight: 400;
+    color: #eee;
+    background-color: #424242;
+    >div {
+        max-width: 96rem;
+        padding: 0 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        text-transform: uppercase;
+        // font-family: 'Miriam Libre', sans-serif;
+        font-family: 'Abel', sans-serif;
+    }
+}
+
+.columns {
+    max-width: 96rem;
+    padding: 0 1.5rem;
+    // border-top: 1px solid white;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    h1,
+    h2 {
+        padding: 0 2.25rem;
+        margin-top: 0;
+        // margin-bottom: 1.5rem;
+        line-height: 1;
+        font-family: 'Abel', sans-serif;
+        // color: #03A9F4;
+        color: #0288D1;
+    }
+}
+
+.main-column,
+.side-column {
+    padding: 1.5rem 0;
+}
+
+.main-column {
+    border-left: 1px solid #BDBDBD;
+    // margin-left: 1.5rem;
+    flex-grow: 4;
+}
+
+.side-column {
+    min-width: 283px;
+    flex-grow: 0;
+}
+
+// ngx-datatable {
+// }
+.user-cell {
+    display: flex;
+    align-items: center;
+    .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 100px;
+        margin-right: 0.75rem;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+.league-name-with-avatar-cell {
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    align-items: center;
+    // background-color: #ccc;
+    .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 100px;
+        margin-right: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 24px;
+        color: #03A9F4;
+        text-shadow: 2px 2px 0 rgba(#fff, 0.5);
+        // background-color: #29B6F6;
+        background-color: #ccc;
+        background-size: contain;
+        background-position: center;
+    }
+    .label {
+        font-weight: 600;
+        font-family: 'Abel', sans-serif;
+        // text-transform: uppercase;
+        // background-color: #ccc;
+    }
+}

@@ -1,13 +1,75 @@
 .hero {
-    height: 32rem;
+    // height: 32rem;
     padding-top: 7rem;
+    padding-bottom: 1.5rem;
+    // margin-bottom: 1.5rem;
     position: relative;
     background-color: #212121;
     // z-index: -1;
     box-sizing: border-box;
-    .button-row {
-        display: flex;
-        justify-content: center;
+    // &:before {
+    //     content: "";
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     background: linear-gradient(0deg, #ffffff, #a29e01, #ffe600, #fbff00, #fffe28, #ffffff, rgba(255, 255, 255, 0));
+    //     mix-blend-mode: darken;
+    // }
+}
+
+.subtitle {
+    padding: 1.5rem 0;
+    border-top: 2px solid #222;
+    margin: 2px 0;
+    text-align: center;
+    // color: whitesmoke;
+    // background-color: grey;
+}
+
+.subtitle1 {
+    padding: 1.5rem 0;
+    border-top: 15px double #222;
+    margin: 4px 0;
+    text-align: center;
+    // color: whitesmoke;
+    // background-color: grey;
+}
+
+.subtitle2 {
+    padding: 1.5rem 0;
+    border-top: 15px single #222;
+    margin: 4px 0;
+    text-align: center;
+    // color: whitesmoke;
+    // background-color: grey;
+}
+
+.button-row {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    // border-top: 5px solid #222;
+    // border-bottom: 4px solid #222;
+    box-sizing: border-box;
+    // margin-top: 0.5rem;
+    margin-bottom: 10rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+    &:before {
+        content: '';
+        width: 100%;
+        height: calc(100% - 4px);
+        border-top: 2px solid #eee;
+        border-bottom: 2px solid #ddd;
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        // background-color: #222;
     }
 }
 
@@ -18,8 +80,12 @@
         margin-top: 1rem;
         margin-bottom: 0;
         position: relative;
-        font-size: 5rem;
+        font-size: 5.0rem;
+        font-weight: 500;
+        line-height: 1;
         letter-spacing: -0.05em;
+        // text-transform: uppercase;
+        // font-family: 'Playfair Display SC', serif;
         // -webkit-text-stroke-width: 10px;
         // -webkit-text-stroke-color: black;
         // color: #0b1307;
@@ -27,6 +93,7 @@
         // color: #ffef00;
         // color: #fffb00;
         color: #fff;
+        // text-shadow: 0 5px 15px #111;
         // -webkit-background-clip: text;
         &:after {
             content: "";
@@ -62,6 +129,13 @@
             // background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), #ffca0d, #ffe600, #ffeb00, #fffbe1, rgba(103, 80, 80, 0));
             // background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), #ffca0d, #ffe600, #ffeb00, #ffffff, rgba(103, 80, 80, 0));
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), #ffca0d, #ffe000, #ffeb00, #ffffff, rgba(103, 80, 80, 0));
+            background: linear-gradient(0deg, rgba(255, 254, 255, 0.95), #f3e000, #b9bb2c, #efff00, #fffe28, #ffffff, rgba(103, 80, 80, 0));
+            background: linear-gradient(0deg, rgb(148, 171, 57), #e0da13, #fbff00, #fbff00, #fffe28, #ffffff, rgba(103, 80, 80, 0));
+            background: linear-gradient(0deg, #ffffff, #e0da13, #fbff00, #fbff00, #fffe28, #ffffff, rgba(255, 255, 255, 0));
+            background: linear-gradient(0deg, #ffffff, #a29e01, #fbff00, #fbff00, #fffe28, #ffffff, rgba(255, 255, 255, 0));
+            background: linear-gradient(0deg, #ffffff, #a29e01, #ffe600, #fbff00, #fffe28, #ffffff, rgba(255, 255, 255, 0));
+            // background: linear-gradient(45deg, #ffffff, #f3f1b0, #ffe600, #c3c52b, #fffe28, #fbf069, rgba(255, 255, 255, 0));
+            //     background: linear-gradient(78deg, #000000, #f3f1b0, #ffe52e, #c3c52b, #fdfd9e, #dacd30, rgba(255, 255, 255, 0));
             // mix-blend-mode: color-dodge;
             mix-blend-mode: darken;
             // opacity: 0.5;
@@ -72,6 +146,8 @@
     h2,
     h3,
     h4 {
+        // margin-top: 0;
+        margin-bottom: 2rem;
         position: relative;
         letter-spacing: 0.025em;
         color: #eee;

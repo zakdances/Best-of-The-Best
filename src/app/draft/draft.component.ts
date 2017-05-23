@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { SharedService } from './../shared.service';
 
 @Component({
   selector: 'app-draft',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DraftComponent implements OnInit {
 
-  constructor() { }
+  rows: FirebaseListObservable<any>;
+  columns = [{
+    name: 'Team',
+    prop: 'name'
+    
+  }, {
+    name: 'Player Count'  
+  }];
+
+  constructor(private shared: SharedService, private db: AngularFireDatabase) { }
 
   ngOnInit() {
+    this.rows = this.db.list('/teams');
   }
 
 }

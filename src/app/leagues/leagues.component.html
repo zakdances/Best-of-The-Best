@@ -1,0 +1,71 @@
+<!--<h1 class='mw8 center fw4'>All Leagues</h1>-->
+<div class='hero mat-elevation-z3'>
+    <div class='logo'>
+        <!--<div class='football'></div>-->
+        <h1 class='f2 fw6'>Leagues</h1>
+        <!--<div class='mw5 center'>Use your Facebook account or Google account to login to Best of the Best.</div>-->
+
+        <!--<div class='button-row'>
+            <a md-raised-button routerLink="login" color='accent'>Sign Up With Facebook</a>
+            <button md-raised-button color='primary'>Sign Up With Google</button>
+        </div>-->
+    </div>
+
+</div>
+<div class='columns'>
+    <div class='side-column'>
+        <h1 class='f3 fw6 ttu' style='opacity: 1;'>Top Leagues</h1>
+        <ngx-datatable class="table-theme-2" [rows]="rows | async" [columns]="sideColumns" [columnMode]="'standard'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [reorderable]="reorderable">
+
+            <!--<ng-template #userCell let-row="row" let-value="value" let-i="index">
+            <div class='league-name-with-avatar-cell'>
+                    <div class='avatar' [style.background-image]='"url(" + (value | leagueAvatarFromId | async) + ")"'></div>
+                    <span>{{value | leagueNameFromId | async}}</span>
+                </div>
+            </ng-template>-->
+
+            <ng-template #userCell let-row="row" let-value="value" let-i="index">
+
+
+
+                <div class='user-cell'>
+                    <div class='avatar' [style.background-image]='"url(" + (value | userAvatarFromId | async) + ")"'></div>
+                    <span>{{value | userNameFromId | async}}</span>
+                </div>
+
+                <!--<md-input-container style="padding-top: 10px;">
+            <input type='date' mdInput placeholder="date" value="2013-01-08">
+        </md-input-container>-->
+            </ng-template>
+        </ngx-datatable>
+    </div>
+    <div class='main-column'>
+        <h1 class='f3 fw6 ttu' style='opacity: 1;'>All Leagues</h1>
+        <ngx-datatable class="table-theme-2" [rows]="rows | async" [columns]="columns" [columnMode]="'standard'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [reorderable]="reorderable">
+
+
+            <ng-template #leagueNameWithAvatarCell let-row="row" let-value="value" let-i="index">
+                <div class='league-name-with-avatar-cell'>
+                    <div class='avatar'>
+                        <span [class]='row.avatar ? row.avatar.class : ""'></span>
+                    </div>
+                    <span class='label'>{{value}}</span>
+                </div>
+            </ng-template>
+
+            <ng-template #userCell let-row="row" let-value="value" let-i="index">
+
+                <div class='user-cell'>
+                    <div class='avatar' [style.background-image]='"url(" + (value | userAvatarFromId | async) + ")"'></div>
+                    <span>{{value | userNameFromId | async}}</span>
+                </div>
+
+                <!--<md-input-container style="padding-top: 10px;">
+            <input type='date' mdInput placeholder="date" value="2013-01-08">
+        </md-input-container>-->
+            </ng-template>
+        </ngx-datatable>
+    </div>
+
+
+</div>

@@ -1,3 +1,100 @@
-<p>
-  create-league works!
-</p>
+<div class='hero'>
+    <div class='logo'>
+        <!--<div class='football'></div>-->
+        <h2 class='f2' style='opacity: 0;'>Create a League</h2>
+        <!--<div class='mw5 center'>Use your Facebook account or Google account to login to Best of the Best.</div>-->
+        <span>l</span>
+        <!--<div class='button-row'>
+            <a md-raised-button routerLink="login" color='accent'>Sign Up With Facebook</a>
+            <button md-raised-button color='primary'>Sign Up With Google</button>
+        </div>-->
+    </div>
+
+</div>
+
+<md-card class="login-card">
+    <h1 class='fw5'>Create a League</h1>
+    <form class="example-form">
+        <!--<md-input-container class="example-full-width">
+            <input mdInput placeholder="Company (disabled)" disabled value="Google">
+        </md-input-container>-->
+
+        <table class="example-full-width" cellspacing="0" style='width: 100%'>
+            <tr>
+                <td>
+                    <h2 class='fw4'>League Name</h2>
+                    <md-input-container class="example-full-width" style='width: 100%'>
+                        <input name='name' mdInput placeholder="Enter the name of your new league" [(ngModel)]='league.name' required>
+                    </md-input-container>
+                </td>
+                <!--<td>
+                    <h2 class='fw4'>League Name</h2>
+                    <md-input-container class="example-full-width" style='width: 100%'>
+                        <input name='team' mdInput placeholder="Enter the name of your new league" required>
+                    </md-input-container>
+                </td>-->
+                <!--<td>
+                    <md-input-container class="example-full-width">
+                        <input mdInput placeholder="Long Last Name That Will Be Truncated">
+                    </md-input-container>
+                </td>-->
+            </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0" style='width: 100%'>
+            <tr>
+                <td>
+                    <h2 class='fw4'>Draft Time</h2>
+                    <md-input-container class="example-full-width" style='width: 100%'>
+                        <input name='name' mdInput placeholder="Enter the date of the new season" required>
+                    </md-input-container>
+                </td>
+                <td>
+                    <h2 class='fw4'>Teams</h2>
+                    <md-input-container class="example-full-width" style='width: 100%'>
+                        <input name='team' mdInput placeholder="Enter quantity of teams" required>
+                    </md-input-container>
+                </td>
+                <!--<td>
+                    <md-input-container class="example-full-width">
+                        <input mdInput placeholder="Long Last Name That Will Be Truncated">
+                    </md-input-container>
+                </td>-->
+            </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0" style='width: 100%'>
+            <tr>
+                <td>
+                    <h2 class='fw4'>Scoring Type</h2>
+                    <md-input-container class="example-full-width" style='width: 100%'>
+                        <input name='name' mdInput placeholder="Type of scoring" required>
+                    </md-input-container>
+                </td>
+                <td>
+                    <h2 class='fw4'>Draft Type</h2>
+                    <md-input-container class="example-full-width" style='width: 100%'>
+                        <input name='team' mdInput placeholder="Pick a draft style" required>
+                    </md-input-container>
+                </td>
+                <!--<td>
+                    <md-input-container class="example-full-width">
+                        <input mdInput placeholder="Long Last Name That Will Be Truncated">
+                    </md-input-container>
+                </td>-->
+            </tr>
+        </table>
+
+        <!--<h2 class='fw4'>Choose League Symbol</h2>
+        <md-radio-group>
+            <md-radio-button value="1">Option 1</md-radio-button>
+            <md-radio-button value="2">Option 2</md-radio-button>
+        </md-radio-group>-->
+        <div></div>
+        <button md-raised-button (click)='submit()' color='accent'>submit</button>
+    </form>
+
+</md-card>
+
+<div class='extras'>
+</div>

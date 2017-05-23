@@ -57,13 +57,14 @@
                         You can create an account using Facebook or Google. If you've already created an account, you can login.
                     </p>-->
                     <div class='button-row'>
-                        <div class='f1 fw3 mt3 mbb4'>SIGNUP WITH</div>
+                        <div class='f2 fw3 mt3 mbb4'>SIGNUP WITH</div>
                         <md-icon class='center mb2'>home</md-icon>
-                        <a md-raised-button routerLink="login" class='facebook'>Sign Up With Facebook</a>
+                        <!--<hr/>-->
+                        <a md-raised-button routerLink="login" class='facebook' (click)='loginWithFacebook()'>Sign Up With Facebook</a>
                         <div class='f6 fw6 mt2 mb2'>OR</div>
-                        <button md-raised-button class='google'>Sign Up With Google</button>
+                        <button md-raised-button class='google' (click)='loginWithGoogle()'>Sign Up With Google</button>
                         <md-icon class='center mb2'>home</md-icon>
-                        <div class='f2 fw3 mt3 mb3'>ALREADY SIGN UP?</div>
+                        <div class='f3 fw3 mt3 mb3'>ALREADY SIGN UP?</div>
                     </div>
                 </md-card-content>
                 <!--<md-card-actions>

@@ -1,3 +1,16 @@
-<p>
-  draft works!
-</p>
+<div class='hero mat-elevation-z5'>
+    <div class='logo'>
+        <!--<div class='football'></div>-->
+        <h1 class='f2 fw6'>Teams and Players</h1>
+        <!--<div class='mw5 center'>Use your Facebook account or Google account to login to Best of the Best.</div>-->
+
+        <!--<div class='button-row'>
+            <a md-raised-button routerLink="login" color='accent'>Sign Up With Facebook</a>
+            <button md-raised-button color='primary'>Sign Up With Google</button>
+        </div>-->
+    </div>
+
+</div>
+
+<ngx-datatable class="material" [rows]="rows | async" [columns]="columns" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [reorderable]="reorderable">
+</ngx-datatable>

@@ -1,0 +1,24 @@
+.hero {
+    // min-height: 4rem;
+    display: flow-root;
+    font-weight: 400;
+    color: #eee;
+    background-color: #424242;
+    >div {
+        max-width: 96rem;
+        padding: 0 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        text-transform: uppercase;
+        // font-family: 'Miriam Libre', sans-serif;
+        font-family: 'Abel', sans-serif;
+    }
+}
+
+ngx-datatable {
+    max-width: 64rem;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
