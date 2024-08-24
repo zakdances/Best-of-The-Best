@@ -1,4 +1,4 @@
-# BestofthebestWeb (Project cancelled, client didn't pay ☹️ )
+# BestofthebestWeb (Project discontinued, client declined proposal)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
 
